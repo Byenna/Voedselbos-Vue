@@ -101,7 +101,7 @@
 
 <!-- start shoppingcart -->
 
-    <div id="cartContainer" class="container-fluid fixed-top ">
+    <div v-show="shopCart" id="cartContainer" class="container-fluid fixed-top ">
       <div :class="{cart : shopCart}">
         <!-- cart item -->
         <div class="cart-item d-flex justify-content-between text-capitalize my-3">
