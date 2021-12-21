@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
   <!-- end fontawesome -->
 
-  <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/styles.css'>
   <!-- start script -->
   <script src="/assets/js/config.js"></script>
   <!-- end script-->
@@ -61,7 +61,7 @@
               <button class="bi bi-search btn btn-light"></button>
 
               <span id="basket">
-                <i class="btn btn-light bi bi-basket"></i>
+                <i @click="showCart" class="btn btn-light bi bi-basket"></i>
               </span>
             </form>
 
@@ -99,8 +99,8 @@
     <div id="cartContainer" class="container-fluid fixed-top ">
       <div id="cart" class="cart">
         <!-- cart item -->
-        <!-- <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-        <img src="/images/citroen.jpg" class="img-fluid rounded-circle" id="item-img" alt="">
+        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+        <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
         <div class="item-text">
 
           <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
@@ -110,7 +110,7 @@
         <a href="#" id='cart-item-remove' class="cart-item-remove">
           <i class="fas fa-trash"></i>
         </a>
-      </div> -->
+      </div>
         <!--end of  cart item -->
 
         <!-- cart total -->
@@ -246,9 +246,8 @@
   </footer>
 
 
-
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<!-- start script color change nav-bar -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -257,7 +256,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- end script color change nav-bar -->
 
   <!-- start Vue node -->
   <script src="/node_modules/vue/dist/vue.js"></script>
@@ -268,6 +267,7 @@
   <!-- end vue instance -->
 
   <!-- start script -->
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/landingpage.js"></script>
   <script src="/assets/js/script.js"></script>
   <!-- end script-->

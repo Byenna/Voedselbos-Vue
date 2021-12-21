@@ -9,7 +9,7 @@ Vue.component("products", {
       <h5 class="store-item-value">€ <strong id="store-item-price" class="font-weight-bold">4</strong>
       </h5>
 
-      <span class="buttonItem"><i class="btn btn-primary">Bestel</i></span>
+      <span class="buttonItem"><i  class="btn btn-primary">Bestel</i></span>
 
 
 
@@ -18,7 +18,7 @@ Vue.component("products", {
     `,
     data() {
         return {
-           
+         
          
         }
     },
@@ -90,12 +90,17 @@ let app = new Vue({
             }
         ],
         
-
-    
-
-
 },
-
+data() {
+    return {
+        
+    }
+},
+methods: {
+    showCart() {
+        this.showCart = !this.showCart
+    }
+}
    
     
 
