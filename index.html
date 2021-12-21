@@ -101,40 +101,42 @@
 
 <!-- start shoppingcart -->
 
-    <div v-show="shopCart" id="cartContainer" class="container-fluid fixed-top ">
-      <div :class="{cart : shopCart}">
-        <!-- cart item -->
-        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-          <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
-          <div class="item-text">
+<div v-show="shopCart" id="cartContainer" class="container-fluid fixed-top ">
+  <div :class="{cart : shopCart}">
+    <!-- cart item -->
+    
+    <div  v-for="selectedVariant in selectedVariants" class="cart-item d-flex justify-content-between text-capitalize my-3">
+      <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
+      <div class="item-text">
 
-            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-            <span>€</span>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
-          </div>
-          <a href="#" id='cart-item-remove' class="cart-item-remove">
-            <i class="fas fa-trash"></i>
-          </a>
-        </div>
-        <!--end of  cart item -->
-
-        <!-- cart total -->
-        <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-          <h5>total</h5>
-          <h5> € <strong id="cart-total" class="font-weight-bold"></strong> </h5>
-        </div>
-        <!--end cart total -->
-        <!-- cart buttons -->
-        <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-          <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">Verder Winkelen</a>
-          <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">Bestellen</a>
-        </div>
-        <!--end of  cart buttons -->
-        <!--  -->
+        <p id="cart-item-title" class="font-weight-bold mb-0">{{ name }}</p>
+        <span>€</span>
+        <span id="cart-item-price" class="cart-item-price" class="mb-0">{{ price}}</span>
       </div>
+      <a href="#" id='cart-item-remove' class="cart-item-remove">
+        <i @click="removeItemFromCart(fruit[0])" class="fas fa-trash"></i>
+      </a>
     </div>
+    <P>Aantal producten in mandje: {{ cart }}</P>
+    <!--end of  cart item -->
 
-    <!-- end shoppingcart -->
+    <!-- cart total -->
+    <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+      <h5>total</h5>
+      <h5> € <strong id="cart-total" class="font-weight-bold"></strong> </h5>
+    </div>
+    <!--end cart total -->
+    <!-- cart buttons -->
+    <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+      <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">Verder Winkelen</a>
+      <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">Bestellen</a>
+    </div>
+    <!--end of  cart buttons -->
+    <!--  -->
+  </div>
+</div>
+
+<!-- end shoppingcart -->
 
     <!-- start about section -->
 
@@ -176,8 +178,32 @@
 
     <!-- start items to sell -->
 
-    <products :products="fruits"></products>
     
+    <div id="allItems">
+      <section id="form-container" class="itemsFirstRow">
+        <div class="container">
+          <div class="row">
+            <div v-for="(fruit, index) in fruits" class="col-sm">
+              <div class="card" style="width: 18rem;">
+                <img :src="fruit.image" class="card-img-top" alt="kersen">
+                <div class="card-body">
+                  <h5 class="card-title">{{ fruit.name }}</h5>
+              
+                  <p class="card-text">{{ fruit.description }}</p>
+                  <h5 class="store-item-value">€ <strong id="store-item-price" class="font-weight-bold">4</strong>
+                  </h5>
+              
+                  <span @click="updateCart(index)" class="buttonItem"><i  class="btn btn-primary">Bestel</i></span>
+              
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  
 
     <!-- end items to sell -->
 
