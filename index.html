@@ -65,7 +65,7 @@
               <button class="bi bi-search btn btn-light"></button>
 
               <span id="basket">
-                <i @click="{showCart:showCart}" class="btn btn-light bi bi-basket"></i>
+                <i @click="toggleCart" class="btn btn-light bi bi-basket"></i>
               </span>
             </form>
 
@@ -99,9 +99,10 @@
     </section>
     <!-- end landingtext -->
 
+<!-- start shoppingcart -->
 
     <div id="cartContainer" class="container-fluid fixed-top ">
-      <div id="cart" class="cart">
+      <div :class="{cart : shopCart}">
         <!-- cart item -->
         <div class="cart-item d-flex justify-content-between text-capitalize my-3">
           <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
@@ -132,6 +133,10 @@
         <!--  -->
       </div>
     </div>
+
+    <!-- end shoppingcart -->
+
+    <!-- start about section -->
 
     <div id="about-container" class="container-fluid">
       <div class="row">
@@ -166,7 +171,7 @@
       </div>
     </div>
 
-
+<!-- end about section -->
 
 
     <!-- start items to sell -->

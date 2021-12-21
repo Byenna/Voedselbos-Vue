@@ -102,12 +102,13 @@ body {
   right: 1em;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.7);
-  width: 0;
+  width: 18;
   overflow: hidden;
+  padding: 2rem 1.5rem;
 }
 .show-cart {
   width: 18em;
-  padding: 2rem 1.5rem;
+  
   transform: rotateY(-360deg);
   z-index: 1;
   
