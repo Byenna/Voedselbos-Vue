@@ -1,0 +1,19 @@
+{
+  "name": "voedselbos-vue",
+  "version": "1.0.0",
+  "description": "Voedselbos vue single page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byenna/Voedselbos-Vue.git"
+  },
+  "author": "Juraia Pinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Byenna/Voedselbos-Vue/issues"
+  },
+  "homepage": "https://github.com/Byenna/Voedselbos-Vue#readme"
+}
