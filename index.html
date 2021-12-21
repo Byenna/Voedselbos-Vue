@@ -21,6 +21,10 @@
   <script src="/assets/js/config.js"></script>
   <!-- end script-->
 
+ <!-- start components -->
+  
+  <!-- <script src="/assets/js/components/products.js"></script> -->
+  <!-- start components -->
 </head>
 
 <body>
@@ -61,7 +65,7 @@
               <button class="bi bi-search btn btn-light"></button>
 
               <span id="basket">
-                <i @click="showCart" class="btn btn-light bi bi-basket"></i>
+                <i @click="{showCart:showCart}" class="btn btn-light bi bi-basket"></i>
               </span>
             </form>
 
@@ -100,17 +104,17 @@
       <div id="cart" class="cart">
         <!-- cart item -->
         <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-        <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
-        <div class="item-text">
+          <img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
+          <div class="item-text">
 
-          <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
-          <span>€</span>
-          <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+            <span>€</span>
+            <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+          </div>
+          <a href="#" id='cart-item-remove' class="cart-item-remove">
+            <i class="fas fa-trash"></i>
+          </a>
         </div>
-        <a href="#" id='cart-item-remove' class="cart-item-remove">
-          <i class="fas fa-trash"></i>
-        </a>
-      </div>
         <!--end of  cart item -->
 
         <!-- cart total -->
@@ -164,41 +168,22 @@
 
 
 
-    <section id="img-container">
-      <div class="overlay"></div>
-    </section>
 
+    <!-- start items to sell -->
 
+    <products :products="fruits"></products>
     
 
-        <!-- items to sell -->
-        <div id="allItems">
-          <section id="form-container" class="itemsFirstRow">
-            <div class="container">
-              <div class="row">
-                <div v-for="fruit in fruits" class="col-sm">
-                  <products :fruit_data="fruit"></products>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-
-      </div>
- 
-
-
+    <!-- end items to sell -->
 
   </div>
 
+
+
+
+  
+
   <!-- einde vue section -->
-
-
-
-
-
-
 
 
   <footer class="footer">
@@ -232,10 +217,8 @@
         </div>
 
       </div>
-
-
-
     </div>
+
     <div class="container-fluid">
       <div class="row">
         <div class="col text-center text-white fs-4 bg-info ">
@@ -246,8 +229,8 @@
   </footer>
 
 
-<!-- start script color change nav-bar -->
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- start script color change nav-bar -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
