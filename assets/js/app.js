@@ -28,10 +28,12 @@ Vue.component("products", {
     props: {
         products: {}
     },
+    
 
 
     data() {
         return {
+            
             fruits: [
                 {
                     id: 1,
@@ -104,6 +106,7 @@ let app = new Vue({
 
     data() {
         return {
+            shopCart: true,
             appName: 'Voedselbos',
             fruits: true
         }
@@ -114,8 +117,8 @@ let app = new Vue({
     },
 
     methods: {
-        showCart() {
-            this.showCart = !this.showCart
+        toggleCart() {
+            this.shopCart = !this.shopCart
         }
     }
 
