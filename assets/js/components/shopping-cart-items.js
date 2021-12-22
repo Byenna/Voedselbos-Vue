@@ -2,7 +2,6 @@ Vue.component("shopping-cart-items", {
     data: function () {
         return {
             fruitList: fruits,
-            cart: 0,
             selectedVariants: [],
         }
     },
@@ -11,23 +10,13 @@ Vue.component("shopping-cart-items", {
 
 
     methods: {
-        updateCart(index) {
-            this.cart += 1
-            this.selectedVariants = index
-
-        },
         removeItemFromCart(fruit) {
             this.cart.splice(this.cart.indexOf(fruit))
         }
     },
 
     computed: {
-        name() {
-            return this.fruits[this.selectedVariants].name
-        },
-        price() {
-            return this.fruits[this.selectedVariants].price
-        }
+      
     },
 
     template: `
@@ -46,7 +35,7 @@ Vue.component("shopping-cart-items", {
                 <i @click="removeItemFromCart(fruit[0])" class="fas fa-trash"></i>
             </a>
         </div>
-        <P>Aantal producten in mandje: {{ cart }}</P>
+        
     </div>`,
 
 

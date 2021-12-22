@@ -1,27 +1,29 @@
 
 let app = new Vue({
     el: '#app',
-    data: { 
-        
-        
+    data: {
+        cart: 0,
         shopCart: false,
         appName: 'Voedselbos',
-        
-
-        
+       
 
     },
 
     computed: {
-        
+
     },
 
     methods: {
         toggleCart() {
             this.shopCart = !this.shopCart
         },
-        
-       
+        updateCart(index) {
+            this.cart += 1
+            console.log(index);
+        }
+      
+
+
     }
 
 

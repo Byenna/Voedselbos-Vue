@@ -97,17 +97,17 @@ body {
 .cart {
   position: absolute;
   min-height: 10rem;
-  background: var(--mainWhite);
+  /* background: var(--mainWhite); */
   top: 4em;
   right: 1em;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
   background: rgba(255, 255, 255, 0.7);
   width: 18;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 2rem 1.5rem;
 }
 
-/* misschien in de toekomst nog gebruik maken van transform */
+/* misschien in de toekomst nog gebruik maken van */
 
 /* .show-cart {
   width: 18em;
