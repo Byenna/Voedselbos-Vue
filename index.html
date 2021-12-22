@@ -26,12 +26,13 @@
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
 	<!-- end script color change nav-bar -->
-	
+
 	<script src="/node_modules/vue/dist/vue.js"></script>
 
 	<script src="/assets/js/config.js"></script>
 
 	<script src="/assets/js/fruits.js"></script>
+	<script src="/assets/js/components/shopping-cart-items.js"></script>
 	<script src="/assets/js/components/products.js"></script>
 </head>
 
@@ -115,8 +116,8 @@
 		<div v-show="shopCart" id="cartContainer" class="container-fluid fixed-top ">
 			<div :class="{cart : shopCart}">
 				<!-- cart item -->
-
-				<div v-for="selectedVariant in selectedVariants"
+				<shopping-cart-items></shopping-cart-items>
+				<!-- <div v-for="selectedVariant in selectedVariants"
 					class="cart-item d-flex justify-content-between text-capitalize my-3">
 					<img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
 
@@ -131,7 +132,7 @@
 					</a>
 				</div>
 
-				<P>Aantal producten in mandje: {{ cart }}</P>
+				<P>Aantal producten in mandje: {{ cart }}</P> -->
 				<!--end of  cart item -->
 
 				<!-- cart total -->
