@@ -2,10 +2,12 @@
 let app = new Vue({
     el: '#app',
     data: { 
+        
         cart: 0,
         selectedVariants: [],
         shopCart: false,
         appName: 'Voedselbos',
+        
 
         fruits: [
             {
@@ -76,6 +78,7 @@ let app = new Vue({
         updateCart(index) {
             this.cart += 1
             this.selectedVariants = index
+
         },
         removeItemFromCart(fruit) {
             this.cart.splice(this.cart.indexOf(fruit))
