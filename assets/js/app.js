@@ -2,9 +2,10 @@
 let app = new Vue({
     el: '#app',
     data: {
-        cart: 0,
+        cart: [],
         shopCart: false,
         appName: 'Voedselbos',
+        fruitList: "fruits"
        
 
     },
@@ -17,9 +18,9 @@ let app = new Vue({
         toggleCart() {
             this.shopCart = !this.shopCart
         },
-        updateCart(index) {
-            this.cart += 1
-            console.log(index);
+        updateCart(id) {
+            this.cart.push(id)
+            
         }
       
 

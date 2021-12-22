@@ -2,6 +2,7 @@ Vue.component("products", {
     data: function () {
         return {
             fruitList: fruits,
+            selectedVariant: 0,
             
             
         }
@@ -13,9 +14,9 @@ Vue.component("products", {
 
 
     methods: {
-        addToCart(index) {
-            console.log("hallo");
-            this.$emit('add-to-cart', index)
+        addToCart(index) { 
+            this.selectedVariant = index
+            this.$emit('add-to-cart', this.fruitList[this.selectedVariant].id)
             
 
         },
