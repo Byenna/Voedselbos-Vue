@@ -106,15 +106,17 @@ body {
   overflow: hidden;
   padding: 2rem 1.5rem;
 }
-.show-cart {
+
+/* misschien in de toekomst nog gebruik maken van transform */
+
+/* .show-cart {
   width: 18em;
   
   transform: rotateY(-360deg);
   z-index: 1;
+ 
   
-  
-  
-}
+} */
 
 
 /* end of cart */
