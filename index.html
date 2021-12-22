@@ -26,13 +26,13 @@
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
 	<!-- end script color change nav-bar -->
-
-
+	
 	<script src="/node_modules/vue/dist/vue.js"></script>
 
-
 	<script src="/assets/js/config.js"></script>
-	<!-- <script src="/assets/js/components/products.js"></script> -->
+
+	<script src="/assets/js/fruits.js"></script>
+	<script src="/assets/js/components/products.js"></script>
 </head>
 
 <body>
@@ -47,8 +47,8 @@
 					<a class="navbar-brand fs-2 text-white" href="/index.html">{{ appName }}</a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-						aria-label="Toggle navigation">
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
@@ -56,12 +56,13 @@
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 							<li class="nav-item">
-								<a class="nav-link active text-white fs-2" aria-current="page" href="#allItems">Producten</a>
+								<a class="nav-link active text-white fs-2" aria-current="page"
+									href="#allItems">Producten</a>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle text-white fs-2" href="#" id="navbarDropdown" role="button"
-									data-bs-toggle="dropdown" aria-expanded="false">Informatie
+								<a class="nav-link dropdown-toggle text-white fs-2" href="#" id="navbarDropdown"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">Informatie
 								</a>
 
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -74,7 +75,8 @@
 						</ul>
 
 						<form class="d-flex">
-							<input class="form-control me-2" type="search" placeholder="Wat zoekt u?" aria-label="Search">
+							<input class="form-control me-2" type="search" placeholder="Wat zoekt u?"
+								aria-label="Search">
 
 							<button class="bi bi-search btn btn-light"></button>
 
@@ -97,7 +99,8 @@
 
 							<p id="tekst" class=" div2 text-center text-nowrap">​"Welkom in ons
 								<br>Voedselbos!"<br>
-								<button class="btn btn-outline-success text-white fw-bold">Reserveer uw wandeling</button>
+								<button class="btn btn-outline-success text-white fw-bold">Reserveer uw
+									wandeling</button>
 							</p>
 						</div>
 					</div>
@@ -154,14 +157,18 @@
 			<div class="row">
 				<div class="col">
 					<h2>Onze Voedselbos</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid, quo architecto incidunt molestiae tempore inventore animi. Quasi ullam soluta id dolorum assumenda quisquam earum fuga, debitis rerum dolorem modi!</p>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam maxime magnam, neque illum nam error dolor voluptatem quisquam officia ex repellendus minus tenetur reiciendis corporis rerum perferendis, labore vero vitae?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aliquid, quo architecto incidunt
+						molestiae tempore inventore animi. Quasi ullam soluta id dolorum assumenda quisquam earum fuga,
+						debitis rerum dolorem modi!</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam maxime magnam, neque illum nam
+						error dolor voluptatem quisquam officia ex repellendus minus tenetur reiciendis corporis rerum
+						perferendis, labore vero vitae?</p>
 				</div>
 
 				<div class="col">
 					<img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/assets/images/salade.jpg" alt="">
 				</div>
-				
+
 			</div>
 		</div>
 		<!-- end about section -->
@@ -171,24 +178,7 @@
 		<div id="allItems">
 			<section id="form-container" class="itemsFirstRow">
 				<div class="container">
-					<div class="row">
-						<div v-for="(fruit, index) in fruits" class="col-sm">
-							<div class="card" style="width: 18rem;">
-								<img :src="fruit.image" class="card-img-top" alt="kersen">
-								<div class="card-body">
-									<h5 class="card-title">{{ fruit.name }}</h5>
-
-									<p class="card-text">{{ fruit.description }}</p>
-									<h5 class="store-item-value">€ <strong id="store-item-price" class="font-weight-bold">4</strong>
-									</h5>
-
-									<span @click="updateCart(index)" class="buttonItem"><i class="btn btn-primary">Bestel</i></span>
-
-								</div>
-							</div>
-
-						</div>
-					</div>
+					<products></products>
 				</div>
 			</section>
 		</div>
