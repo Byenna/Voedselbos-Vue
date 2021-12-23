@@ -31,6 +31,13 @@ let app = new Vue({
         updateTotal(id) {
             this.prices.push(id)
         },
+        removeItemFromCart(cart) {
+            {
+                this.carts.splice(this.cart.indexOf(cart))
+                this.cart.splice(this.cart.indexOf(cart))
+                this.prices.splice(this.cart.indexOf(cart))
+                }
+        }
         
     }
 
