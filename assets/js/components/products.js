@@ -16,10 +16,16 @@ Vue.component("products", {
     methods: {
         addToCart(index) { 
             this.selectedVariant = index
-            this.$emit('add-to-cart', this.fruitList[this.selectedVariant].id)
-            
-
+            this.$emit('add-to-cart', this.fruitList[this.selectedVariant])
         },
+        
+       
+    },
+    computed: {
+        name() {
+            this.fruitList[this.selectedVariant].name
+        }
+
     },
 
     template: `

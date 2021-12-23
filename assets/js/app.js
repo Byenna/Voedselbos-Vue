@@ -2,10 +2,11 @@
 let app = new Vue({
     el: '#app',
     data: {
-        cart: [],
+        carts: [],
         shopCart: false,
         appName: 'Voedselbos',
-        fruitList: "fruits"
+        fruitList: "fruits",
+        cart: [],
        
 
     },
@@ -19,9 +20,12 @@ let app = new Vue({
             this.shopCart = !this.shopCart
         },
         updateCart(id) {
+            this.carts.push(id)
             this.cart.push(id)
             
-        }
+        },
+       
+        
       
 
 
