@@ -1,16 +1,29 @@
 Vue.component("products", {
     data: function () {
         return {
-            fruitList: fruits
+            fruitList: fruits,
+            selectedVariant: 0,
+            
+            
         }
     },
     props: {
-        
+
     },
 
 
 
-    methods: {},
+    methods: {
+        addToCart(index) { 
+            this.selectedVariant = index
+            this.$emit('add-to-cart', this.fruitList[this.selectedVariant])
+            this.$emit('add-to-total', this.fruitList[this.selectedVariant].price)
+        },
+        
+       
+       
+    },
+    computed: {},
 
     template: `
 <div  class="row">
@@ -26,7 +39,7 @@ Vue.component("products", {
                     <strong id="store-item-price" class="font-weight-bold">{{ fruit.price }}</strong>
                     </h5>
 
-                    <span @click="updateCart(index)" class="buttonItem"><i
+                    <span @click="addToCart(index)" class="buttonItem"><i
                         class="btn btn-primary">Bestel</i>
                     </span>
                 </div>

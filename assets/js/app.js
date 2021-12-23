@@ -1,40 +1,37 @@
 
 let app = new Vue({
     el: '#app',
-    data: { 
-        fruitList: fruits,
-        cart: 0,
-        selectedVariants: [],
+    data: {
+        carts: [],
         shopCart: false,
         appName: 'Voedselbos',
-        
+        fruitList: "fruits",
+        cart: [],
+        prices: [],
+        prijs: 0,
 
-        
+
 
     },
 
     computed: {
-        name() {
-            return this.fruits[this.selectedVariants].name
-        },
-        price() {
-            return this.fruits[this.selectedVariants].price
-        }
+       
     },
 
     methods: {
         toggleCart() {
             this.shopCart = !this.shopCart
         },
-        updateCart(index) {
-            this.cart += 1
-            this.selectedVariants = index
+        updateCart(id) {
+            this.carts.push(id)
+            this.cart.push(id)
+
 
         },
-        removeItemFromCart(fruit) {
-            this.cart.splice(this.cart.indexOf(fruit))
-            }
-       
+        updateTotal(id) {
+            this.prices.push(id)
+        },
+        
     }
 
 
