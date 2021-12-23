@@ -7,12 +7,15 @@ let app = new Vue({
         appName: 'Voedselbos',
         fruitList: "fruits",
         cart: [],
-       
+        prices: [],
+        prijs: 0,
+
+
 
     },
 
     computed: {
-
+       
     },
 
     methods: {
@@ -22,13 +25,13 @@ let app = new Vue({
         updateCart(id) {
             this.carts.push(id)
             this.cart.push(id)
-            
+
+
         },
-       
+        updateTotal(id) {
+            this.prices.push(id)
+        },
         
-      
-
-
     }
 
 

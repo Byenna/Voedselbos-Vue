@@ -17,16 +17,13 @@ Vue.component("products", {
         addToCart(index) { 
             this.selectedVariant = index
             this.$emit('add-to-cart', this.fruitList[this.selectedVariant])
+            this.$emit('add-to-total', this.fruitList[this.selectedVariant].price)
         },
         
        
+       
     },
-    computed: {
-        name() {
-            this.fruitList[this.selectedVariant].name
-        }
-
-    },
+    computed: {},
 
     template: `
 <div  class="row">

@@ -117,30 +117,34 @@
 			<div :class="{cart : shopCart}">
 				<!-- cart item -->
 				<div>
-					<div v-for="cart in carts"
-						class="cart-item d-flex justify-content-between text-capitalize my-3">
+					<div v-for="cart in carts" class="cart-item d-flex justify-content-between text-capitalize my-3">
 						<img src="#" class="img-fluid rounded-circle" id="item-img" alt="">
-			
+
 						<div class="item-text">
 							<p id="cart-item-title" class="font-weight-bold mb-0">{{ cart.name }}</p>
 							<span>€</span>
 							<span id="cart-item-price" class="cart-item-price mb-0">{{ cart.price }}</span>
-						 </div>
-			
+						</div>
+
 						<a href="#" id='cart-item-remove' class="cart-item-remove">
 							<i @click="removeItemFromCart(fruit[0])" class="fas fa-trash"></i>
 						</a>
 					</div>
-					
+
 				</div>
-				
-				<P >Aantal producten in mandje: {{ cart.length }}</P>
+
+				<P>Aantal producten in mandje: {{ cart.length }}</P>
 				<!-- end cart item-->
 
 				<!-- cart total -->
 				<div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-					<h5>total</h5>
-					<h5> € <strong id="cart-total" class="font-weight-bold"></strong> </h5>
+					<h5></h5>
+					<h5> € <strong id="cart-total" class="font-weight-bold"></strong> 
+						{{ this.prices.reduce(function
+						sumOf(acc, curr) {
+						acc = acc + curr
+						return acc
+						}, 0) }}</h5>
 				</div>
 				<!--end cart total -->
 				<!-- cart buttons -->
@@ -181,7 +185,7 @@
 		<div id="allItems">
 			<section id="form-container" class="itemsFirstRow">
 				<div class="container">
-					<products @add-to-cart="updateCart" ></products>
+					<products @add-to-cart="updateCart" @add-to-total="updateTotal"></products>
 				</div>
 			</section>
 		</div>
