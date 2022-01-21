@@ -9,15 +9,20 @@ let app = new Vue({
         cart: [],
         prices: [],
         prijs: 0,
-        totalPrice: 0,
 
 
 
     },
 
-    computed: {
-
-    },
+        computed: {
+            totalPrice() {
+                return (this.prices.reduce(function sumOf(acc, curr) {
+                    acc = acc + curr
+                    return acc
+                }, 0) );
+            }
+        },
+    
 
 
     methods: {
