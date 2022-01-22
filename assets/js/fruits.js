@@ -5,7 +5,8 @@ const fruits = [
         description: "Kom zoveel kersen plukken als u wil voor een vaste prijs! De kersen zijn erg zoet dit jaar.",
         image: "/assets/images/kersen.jpg",
         price: 7,
-        quantity: 50,
+        quantity: 50, 
+        show: false,
     },
 
     {
@@ -14,7 +15,8 @@ const fruits = [
         description: "Met deze pruimen maak je de lekkerste taart. De ladder staat al klaar. Waar wacht u nog op?",
         image: "/assets/images/pruimen.jpg",
         price: 4,
-        quantity: 20,
+        quantity: 20, 
+        show: false,
     },
 
     {
@@ -23,7 +25,8 @@ const fruits = [
         description: "De paprika oogst is dit jaar wat magertjes. Graag niet meer dan 2 per klant.",
         image: "/assets/images/paprika.jpg",
         price: 2,
-        quantity: 10,
+        quantity: 10, 
+        show: false,
     },
 
     {
@@ -32,7 +35,8 @@ const fruits = [
         description: "Deze cherrytomaatjes mogen niet ontbreken in uw salade. Zongerijpt en biologisch.",
         image: "/assets/images/salade.jpg",
         price: 5,
-        quantity: 70,
+        quantity: 70, 
+        show: false,
     },
 
     {
@@ -41,7 +45,8 @@ const fruits = [
         description: "Speciaal voor gasten die slecht ter been zijn maken wij ook een groentenpakket.",
         image: "/assets/images/artisjok.jpg",
         price: 8,
-        quantity: 50,
+        quantity: 50, 
+        show: false,
     },
     
     {
@@ -50,6 +55,7 @@ const fruits = [
         description: "Deze Granny's zijn lichtzuur van smaak en klaar om geplukt te worden.",
         image: "/assets/images/appels.jpg",
         price: 10,
-        quantity: 0,
+        quantity: 0, 
+        show: false,
     }
 ]
