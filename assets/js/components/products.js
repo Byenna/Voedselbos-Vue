@@ -3,6 +3,7 @@ Vue.component("products", {
         return {
             fruitList: fruits,
             selectedVariant: 0,
+            show: false,
             
             
         }
@@ -32,8 +33,9 @@ Vue.component("products", {
             <img :src="fruit.image" class="card-img-top" alt="kersen">
                 <div class="card-body">
                     <h5 class="card-title">{{ fruit.name }}</h5>
+                    <p @click='fruit.show = !fruit.show' >Meer info</p>
 
-                    <p class="card-text">{{ fruit.description }}</p>
+                    <p v-show='fruit.show' class="card-text">{{ fruit.description }}</p>
 
                     <h5 class="store-item-value">€ 
                     <strong id="store-item-price" class="font-weight-bold">{{ fruit.price }}</strong>
