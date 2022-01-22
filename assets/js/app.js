@@ -3,12 +3,13 @@ let app = new Vue({
     el: '#app',
     data: {
         carts: [],
-        shopCart: false,
-        appName: 'Voedselbos',
+        shopCart: true,
         fruitList: "fruits",
         cart: [],
         prices: [],
         prijs: 0,
+        viewCart: false,
+       
 
 
 
@@ -26,9 +27,7 @@ let app = new Vue({
 
 
     methods: {
-        toggleCart() {
-            this.shopCart = !this.shopCart
-        },
+       
         updateCart(id) {
             this.carts.push(id)
             this.cart.push(id)
@@ -46,10 +45,16 @@ let app = new Vue({
             }
         },
         closeCart() {
-            if (this.shopCart) {
-                this.shopCart = !this.shopCart
+            if (this.viewCart) {
+                this.viewCart = !this.viewCart
             }
         },
+
+        showCart() {
+                this.viewCart = !this.viewCart
+            
+        }
+
 
 
     }
